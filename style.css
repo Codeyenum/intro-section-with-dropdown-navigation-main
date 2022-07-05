@@ -51,8 +51,10 @@ nav {
    background-color: var(--almostWhite);
    color: var(--mediumGray);
    font-size: .85rem;
-   position: absolute;
    padding: 5rem 0 0 1.25rem;
+   transition: 3s ease-in-out;
+   
+   position: absolute;   
    top: 0;
    right: 0;
    bottom: 0;
@@ -64,11 +66,10 @@ nav {
    display: none;
 }
 
-.mobile_nav-card > img {
+.close_icon {
    position: absolute;
    top: 1rem;
    right: 1rem;
-   width: 18px;
 }
 
 .mobile_nav-card a, .mobile_nav-card li, .mobile_nav-card p {   
@@ -95,8 +96,9 @@ nav {
    margin: 0 .5rem;
 }
 
-.mobile_nav-card a:hover {
+.mobile_nav-card a:hover, .mobile_nav-card p:hover, .mobile_nav-card li:hover {
    color: var(--almostBlack);
+   cursor: pointer;
 }
 
 .login_div {
