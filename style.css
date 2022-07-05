@@ -34,7 +34,7 @@ nav {
 
 .background_dimmer {
    background-color: rgba(0, 0, 0);
-   height: 100vh;
+   height: 150vh;
    position: absolute;
    padding: 5rem 0 0 1.25rem;
    top: -1rem;
@@ -52,7 +52,7 @@ nav {
 
    background-color: var(--almostWhite);
    color: var(--almostBlack);
-   height: 100vh;
+   height: 150vh;
    position: absolute;
    padding: 5rem 0 0 1.25rem;
    right: -1rem;
