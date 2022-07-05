@@ -16,7 +16,8 @@
 
 body {
    padding: 1rem;
-   font-family: 'Epilogue', sans-serif;
+   font-family: 'Epilogue', sans-serif;   
+   background-blend-mode: multiply;
 }
 
 nav {
@@ -27,8 +28,51 @@ nav {
    width: 100%;
 }
 
+.mobile_nav {
+   position: relative;
+}
+
+.background_dimmer {
+   background-color: rgba(0, 0, 0);
+   height: 100vh;
+   position: absolute;
+   padding: 5rem 0 0 1.25rem;
+   top: -1rem;
+   left: -1rem;   
+   width: 40vw;
+   opacity: .7;
+
+   /* display: none; */
+}
+
 .mobile_nav-card {
-   display: none;
+   display: flex;
+   flex-direction: column;
+   align-items:flex-start;
+
+   background-color: var(--almostWhite);
+   color: var(--almostBlack);
+   height: 100vh;
+   position: absolute;
+   padding: 5rem 0 0 1.25rem;
+   right: -1rem;
+   top: -1rem;   
+   width: 60vw;
+
+   /* display: none; */
+}
+
+.mobile_nav-card img {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   width: 18px;
+}
+
+.mobile_nav-card a {
+text-decoration: none;
+color: var(--almostBlack);
+margin-bottom: 1rem;
 }
 
 .main_container {
@@ -50,6 +94,7 @@ nav {
 
 .main_container p {
    color: var(--mediumGray);
+   font-size: .95rem;
    line-height: 1.5rem;
    margin-bottom: 1.5rem;
 }
@@ -70,7 +115,7 @@ nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin: 3rem 0 5.5rem;
+   margin: 2.75rem 0 5.5rem;
 }
 
 .clients_div img {
