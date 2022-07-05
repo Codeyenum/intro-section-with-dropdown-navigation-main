@@ -47,23 +47,23 @@ nav {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
+   gap: 2rem 0;
 
    background-color: var(--almostWhite);
    color: var(--mediumGray);
    font-size: .85rem;
    padding: 5rem 0 0 1.25rem;
-   transition: 3s ease-in-out;
+   width: 60vw;
+   z-index: 3;
    
-   position: absolute;   
+   position: fixed;   
    top: 0;
    right: 0;
    bottom: 0;
-   width: 60vw;
-   z-index: 3;
 }
 
 .hide {
-   display: none;
+   display: none;  
 }
 
 .close_icon {
@@ -77,6 +77,18 @@ nav {
    font-size: .9rem;
    margin-bottom: 1.5rem;
    text-decoration: none;
+}
+
+.mobile_nav-card p, .mobile_nav-card a  {
+   margin-bottom: 0;
+}
+
+/* .features, .company {
+   margin-bottom: .5rem;
+} */
+
+.features_list {
+   padding: .75rem 0;
 }
 
 .mobile_nav-card li > img {
