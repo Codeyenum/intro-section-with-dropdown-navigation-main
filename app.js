@@ -40,38 +40,7 @@ company.addEventListener("click", () => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ###...MOUSE EVENTS...###
 // mouseenter", () => {
 //    featuresList.classList.remove("hide");
 //    featuresArrowDown.classList.add("hide");
