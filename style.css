@@ -24,7 +24,7 @@ body {
 nav {
    display: flex;
    justify-content: space-between;
-   align-items: center;
+   align-items: flex-start;
    margin-bottom: 1rem;
    width: 100%;
 }
@@ -47,7 +47,8 @@ nav {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   gap: 2rem 0;
+   /* gap: 2rem 0; */
+
 
    background-color: var(--almostWhite);
    color: var(--mediumGray);
@@ -79,13 +80,13 @@ nav {
    text-decoration: none;
 }
 
-.mobile_nav-card p, .mobile_nav-card a  {
-   margin-bottom: 0;
+.features.hovering {
+   margin-bottom: .25rem;
 }
 
-/* .features, .company {
-   margin-bottom: .5rem;
-} */
+.company.hovering {
+   margin-bottom: .25rem;
+}
 
 .features_list, .company_list {
    padding: .75rem 0;
@@ -98,10 +99,10 @@ nav {
 .mobile_nav-card li {
    margin-left: 2rem;
    list-style: none;
-   /* display: flex;
+   display: flex;
    align-items: flex-end;
    gap: 0.5rem;
-   justify-content: flex-start; */
+   justify-content: flex-start;
 }
 
 .mobile_nav-card a > img {
@@ -111,6 +112,7 @@ nav {
 .mobile_nav-card a:hover, .mobile_nav-card p:hover, .mobile_nav-card li:hover {
    color: var(--almostBlack);
    cursor: pointer;
+   font-weight: 500;
 }
 
 .login_div {
@@ -160,6 +162,7 @@ nav {
 
 .main_container button {
    background-color: black;
+   border: 1px solid;
    border-radius: 16px;
    color: var(--almostWhite);
    font-family: 'Epilogue', sans-serif;
@@ -168,6 +171,13 @@ nav {
    width: 40%;
    margin: 0 auto;
    padding: 0 1rem;
+}
+
+button:hover {
+   background-color: transparent;
+   color: var(--almostBlack);
+   font-weight: 700;
+   cursor: pointer;
 }
 
 .clients_div {

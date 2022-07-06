@@ -2,7 +2,7 @@ const menuButton = document.querySelector(".menu_icon");
 const closeButton = document.querySelector(".close_icon")
 
 const navCard = document.querySelector(".mobile_nav-card");
-const navCardLinks = document.querySelector(".mobile_nav-card a");
+const navCardHovers = document.querySelector(".mobile_nav-card p");
 const backgroundDim = document.querySelector(".background_dimmer")
 
 const features = document.querySelector(".features");
@@ -25,34 +25,77 @@ closeButton.addEventListener("click", () => {
    backgroundDim.classList.add("hide");
 })
 
-features.addEventListener("mouseenter", () => {
-   featuresList.classList.remove("hide");
-   featuresArrowDown.classList.add("hide");
-   featuresArrowUp.classList.remove("hide");
-   features.style.marginBottom = "0"
-   navCard.style.gap = "1rem";
-   navCardLinks.style.margin = "1rem 0"
+features.addEventListener("click", () => {
+   featuresList.classList.toggle("hide");
+   featuresArrowDown.classList.toggle("hide");
+   featuresArrowUp.classList.toggle("hide");
+   features.classList.toggle("hovering");
 })
 
-featuresList.addEventListener("mouseleave", () => {
-   featuresList.classList.add("hide");
-   featuresArrowDown.classList.remove("hide")
-   featuresArrowUp.classList.add("hide")
-   features.style.marginBottom = "1rem"
-   navCard.style.gap = "1rem";
+company.addEventListener("click", () => {
+   companyList.classList.toggle("hide");
+   companyArrowDown.classList.toggle("hide");
+   companyArrowUp.classList.toggle("hide");
+   company.classList.toggle("hovering");
 })
 
-company.addEventListener("mouseenter", () => {
-   companyList.classList.remove("hide");
-   companyArrowDown.classList.add("hide");
-   companyArrowUp.classList.remove("hide");
-   navCard.style.gap = "1.5rem";
-})
 
-companyList.addEventListener("mouseleave", () => {
-   companyList.classList.add("hide");
-   companyArrowDown.classList.remove("hide")
-   companyArrowUp.classList.add("hide")
-   company.style.marginBottom = "0"
-   navCard.style.gap = "1.5rem";
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// mouseenter", () => {
+//    featuresList.classList.remove("hide");
+//    featuresArrowDown.classList.add("hide");
+//    featuresArrowUp.classList.remove("hide");
+//    features.classList.add("hovering");
+// })
+
+// featuresList.addEventListener("mouseleave", () => {
+//    featuresList.classList.add("hide");
+//    featuresArrowDown.classList.remove("hide");
+//    featuresArrowUp.classList.add("hide");
+//    features.classList.remove("hovering");
+// })
+
+// company.addEventListener("mouseenter", () => {
+//    companyList.classList.remove("hide");
+//    companyArrowDown.classList.add("hide");
+//    companyArrowUp.classList.remove("hide");
+//    company.classList.add("hovering");
+// })
+
+// companyList.addEventListener("mouseleave", () => {
+//    companyList.classList.add("hide");
+//    companyArrowDown.classList.remove("hide")
+//    companyArrowUp.classList.add("hide");
+//    company.classList.remove("hovering");
+// })
