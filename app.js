@@ -5,39 +5,41 @@ const navCard = document.querySelector(".mobile_nav-card");
 const navCardHovers = document.querySelector(".mobile_nav-card p");
 const backgroundDim = document.querySelector(".background_dimmer")
 
-const features = document.querySelector(".features");
-const featuresList = document.querySelector(".features_list");
-const featuresArrowDown = document.querySelector(".features .arrow-down")
-const featuresArrowUp = document.querySelector(".features .arrow-up")
+const features = document.querySelectorAll(".features");
+const featuresList = document.querySelectorAll(".features_list");
+const featuresArrowDown = document.querySelectorAll(".features .arrow-down")
+const featuresArrowUp = document.querySelectorAll(".features .arrow-up")
 
-const company = document.querySelector(".company");
-const companyList = document.querySelector(".company_list");
-const companyArrowDown = document.querySelector(".company .arrow-down")
-const companyArrowUp = document.querySelector(".company .arrow-up")
+const company = document.querySelectorAll(".company");
+const companyList = document.querySelectorAll(".company_list");
+const companyArrowDown = document.querySelectorAll(".company .arrow-down")
+const companyArrowUp = document.querySelectorAll(".company .arrow-up")
 
 menuButton.addEventListener("click", () => {
    navCard.classList.remove("hide");
    backgroundDim.classList.remove("hide");
 })
 
-closeButton.addEventListener("click", () => {
+closeButton.addEventListener("click", () => {   
    navCard.classList.add("hide");
    backgroundDim.classList.add("hide");
 })
 
-features.addEventListener("click", () => {
-   featuresList.classList.toggle("hide");
-   featuresArrowDown.classList.toggle("hide");
-   featuresArrowUp.classList.toggle("hide");
-   features.classList.toggle("hovering");
-})
+features.forEach((feature) => feature.addEventListener("click", () => {
+   featuresList.forEach((x) => x.classList.toggle('hide'));
+   featuresArrowDown.forEach((x) => x.classList.toggle('hide'));
+   featuresArrowUp.forEach((x) => x.classList.toggle('hide'));
+   features.forEach((x) => x.classList.toggle('hovering'));
+}))
 
-company.addEventListener("click", () => {
-   companyList.classList.toggle("hide");
-   companyArrowDown.classList.toggle("hide");
-   companyArrowUp.classList.toggle("hide");
-   company.classList.toggle("hovering");
-})
+company.forEach((comp) => comp.addEventListener("click", () => {
+   companyList.forEach((x) => x.classList.toggle('hide'));
+   companyArrowDown.forEach((x) => x.classList.toggle('hide'));
+   companyArrowUp.forEach((x) => x.classList.toggle('hide'));
+   company.forEach((x) => x.classList.toggle('hovering'));
+}))
+
+
 
 
 // ###...MOUSE EVENTS...###
