@@ -2,7 +2,6 @@ const menuButton = document.querySelector(".menu_icon");
 const closeButton = document.querySelector(".close_icon")
 
 const navCard = document.querySelector(".mobile_nav-card");
-const navCardHovers = document.querySelector(".mobile_nav-card p");
 const backgroundDim = document.querySelector(".background_dimmer")
 
 const features = document.querySelectorAll(".features");
